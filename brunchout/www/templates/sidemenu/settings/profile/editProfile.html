@@ -1,0 +1,31 @@
+<ion-view title="Edit Profile" id="page21">
+  <ion-content padding="false" class="has-header" scroll="false">
+    <form name="editProfile">
+      <ion-list class="list">
+        <div class="item-side-nav item-borderless">
+          <img class="align-center" src="img/AvatarProfile.png">
+          <div class="profileContent">
+            <h3 class="text-background" ng-click="addMedia()">edit</h3>
+          </div>
+        </div>
+        <ion-item class="item-input">
+          <span class="input-label text-gray">First Name</span>
+          <input type="text" ng-init="edit.fName=sideMenu.firstName" ng-model="edit.fName" required></input>
+        </ion-item>
+        <ion-item class="item-input">
+          <span class="input-label text-gray">Last Name</span>
+          <input type="text" ng-init="edit.lName=sideMenu.lastName" ng-model="edit.lName" required></input>
+        </ion-item>
+        <ion-item class="item-input">
+          <span class="input-label text-gray">Job Title</span>
+              <input class="item-input" type="text" ng-init="edit.title=sideMenu.title" ng-model="edit.title" placeholder="ex. Customer Happiness Manager"></input>
+        </ion-item>
+        <button type="submit" ng-disabled="editProfile.$invalid" class="button button-clear-blue button-block" ng-click="submitEdit()">Update</button>
+         <center ng-show="edit.message">{{edit.message}}</center>
+        <ion-scroll direction="x" style="height:200px; min-height: 200px; overflow: scroll; white-space: nowrap;">
+          <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" style="height:200px; padding: 5px 5px 5px 5px;"/>
+        </ion-scroll>
+      </ion-list>
+    </form>
+  </ion-content>
+</ion-view>

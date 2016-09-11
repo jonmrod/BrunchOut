@@ -1,0 +1,46 @@
+<ion-view cache-view="false" title="Brunch Detail" id="page4">
+
+   <ion-nav-buttons side="right">
+   </ion-nav-buttons>
+
+  <ion-content ng-show="!item.message" padding="true" class="has-header">
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="detailRefresh()" spinner="spiral">
+    </ion-refresher>
+    <div class="row">
+      <div class="col">
+        <h1 class="card-title-detail">{{item.title}}</h1>
+        <p>{{item.content}}</p>
+      </div>
+    </div> 
+    <i ng-controller="upvoteBrunchCtrl" ng-click="upvoteBrunch(item._id)" class="thumbs-up right ion-arrow-up-a text-gray">{{item.votes}}</i>
+    <div id="map" data-tap-disabled="true"></div>
+    <div class="row">
+      <div class="col"> 
+        <p class="status-active right">{{item.type}}</p>
+        <img class="item-avatar-feedback" ng-src="img/{{item.imgOfCreator}}"> 
+        <p class="text-gray sm-padding-top"><i class="icon-left ion-ios-person-outline fb-card-icon-padding-r"></i>{{item.createdBy}}
+        <br>
+        <i class="icon-left ion-clock fb-card-icon-padding-r"></i>{{item.createdAt | FulltimeAgo}}</p> 
+      </div>
+    </div>  
+    <form name="NewComment" ng-submit="submitComment()" ng-controller="CommentCtrl">
+       <div class="text-gray">
+        <div class="item-input-inset">
+          <label class="item-input-wrapper item-input">
+            <textarea class="item-input-wrapper commentTextArea"  ng-model="newComment.content" ng-class="generateTextAreaSize('newBrunchTextArea')" placeholder="add a comment..." id="newBrunchTextArea" required></textarea>
+          </label>
+        </div>
+        <div ng-show="NewComment.$valid" class="item-input-wrapper item-clear">
+          <button ng-disabled="NewComment.$invalid" type=submit class="col right item-borderless button button-clear button-positive">Submit</button>
+        </div>
+      </div>
+      <brunch-comments/>
+    </form>
+  </ion-content>
+  <ion-content id="error" ng-show="item.message">
+    <center>
+      <h3 class="title">{{item.message}}</h3>
+    </center>
+  </ion-content>
+
+</ion-view>

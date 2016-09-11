@@ -1,0 +1,12 @@
+<div class="list" ng-repeat="comment in item.comments | orderBy: '-createdAt'" item-width="300px" item-height="50px">
+  <div class="row">
+    <div class="col">
+      <img class="item-avatar-feedback" ng-src="img/{{comment.img}}">
+      <p class="text-gray right">{{comment.createdAt | timeAgo}}</p>
+      <div class="comments">
+          <p class="sm-padding-top bold no-margin"><i class="icon-left"></i>{{comment.name}} <i ng-show="item.canEdit">(you)</i></p>
+          <p class="text-gray text-normal">{{comment.comment}}</p>
+      </div>
+    </div>
+  </div>
+</div>

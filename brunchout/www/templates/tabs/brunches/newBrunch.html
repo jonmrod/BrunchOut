@@ -1,0 +1,27 @@
+<ion-modal-view ng-controller="newBrunchCtrl">
+  <form name="newBrunch">
+    <ion-header-bar class="nav-bar">
+      <h1 class="title">New Brunch Idea</h1>
+      <button class="button button-icon" ng-click="closeBrunch()">
+        <i class="icon ion-ios-close-empty"></i>
+      </button>
+      <button ng-disabled="newBrunch.$invalid || !newBrunch.selectedType" class="button button-clear" ng-click="submit()">Post</button>
+    </ion-header-bar>
+    <ion-content scroll="false">
+      <div class="list">
+        <div class="item item-icon-right" ng-click="openBrunchPopover($event)">
+          <ng-bind-html ng-bind-html="newBrunch.selectedType ? '<b>' + newBrunch.selectedType + '</b>' : 'What type of brunch?'"></ng-bind-html><i class="icon ion-ios-arrow-down"></i>
+        </div>
+        <label class="item item-input placeholder-gray border-b">
+          <input ng-model="newBrunch.title" type="text" placeholder="Enter Your Title" maxlength="{{titleLimit}}" required>
+        </label>
+        <label class="item item-input placeholder-gray border-b">
+          <input type="text" placeholder="Location" location-suggestion location="newBrunch.location" ng-model="newBrunch.location.formatted_address">
+        </label>
+        <label class="item item-input placeholder-gray">
+          <textarea class="commentTextArea" ng-keyup="resizeTextArea()" ng-model="newBrunch.content" placeholder="Why should we eat here?" required></textarea>
+        </label>
+      </div>
+    </ion-content>
+  </form>
+</ion-modal-view>

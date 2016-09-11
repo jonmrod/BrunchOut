@@ -1,0 +1,28 @@
+<ion-view class="pane-blue">
+  <ion-nav-bar class="nav-bar primary-nav">
+    <ion-nav-buttons side="right">
+      <button class="nav-button-clear" ui-sref="start" nav-direction="back"><i class="icon ion-close-round"></i></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <form name="signUp" ng-submit="signup()">
+    <div class="list list-inset list-clear text-white top-padding"> 
+      <label class="item item-input placeholder-white">
+          <i class="icon placeholder-icon white"></i>
+          <input type="text" placeholder="First Name" ng-model="data.fName" required>
+      </label>   
+      <label class="item item-input placeholder-white">
+          <i class="icon placeholder-icon white"></i>
+          <input type="text" placeholder="Last Name" ng-model="data.lName" required>
+      </label>          
+      <label class="item item-input placeholder-white">
+          <i class="icon placeholder-icon white"></i>
+          <input type="email" placeholder="Email" ng-model="data.email" required>
+      </label>
+      <label class="item item-input placeholder-white">
+          <i class="icon placeholder-icon white"></i>
+          <input type="password" placeholder="Password" ng-model="data.password" required>
+      </label>
+      <button type="submit" class="button button-full button-yellow" ng-disabled="!data.email || !data.password">SignUp</button>
+    </div>
+  </form>
+</ion-view>

@@ -1,0 +1,70 @@
+<ion-popover-view class="filter-popover">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <i ng-click="setPopoverSelection('sort')" class="left">
+          Sort  
+        </i>
+        <i ng-click="setPopoverSelection('filter')" class="right">
+          Filter  
+        </i>
+      </ion-item>
+      <div ng-show="popoverSelection == 'filter'">
+        <ion-item class="item item-toggle">
+         All
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-true-value="''" ng-init="data.dateFilter = ''" ng-model="data.dateFilter">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+       </ion-item>
+       <ion-item class="item item-toggle">
+         Today
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-true-value="1" ng-model="data.dateFilter">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+       </ion-item>
+       <ion-item class="item item-toggle">
+         This Week
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-true-value="7" ng-model="data.dateFilter">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+       </ion-item>
+       <ion-item class="item item-toggle">
+         This Month
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-true-value="31" ng-model="data.dateFilter">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+       </ion-item>
+       <ion-item class="item item-toggle">
+         This Year
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-true-value="365" ng-model="data.dateFilter">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+       </ion-item>
+     </div>
+     <div ng-show="popoverSelection == 'sort'">
+      <ion-list>
+        <!-- when in Team tab -->
+        <div>
+          <ion-radio ng-model="selectedSort" ng-click="setSort('-createdAt')" ng-value="'-createdBy'">Newest</ion-radio>
+          <ion-radio ng-model="selectedSort" ng-click="setSort('-votes')" ng-value="'-upvotes'">Votes</ion-radio>
+        </div>
+      </ion-list>
+    </div>
+  </ion-list>
+</ion-content>
+</ion-popover-view>

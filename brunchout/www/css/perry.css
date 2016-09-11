@@ -1,0 +1,72 @@
+
+/*Login Page*/
+
+.center {
+	margin: 0 auto;
+	display: block;
+}
+
+.nav-inline {
+	display: inline-block;
+}
+
+/* background: */
+background: #1F8FCE;
+/* Sketch doesnt export pattern fills at this point */
+background-image: linear-gradient(-270deg, rgba(255,255,255,0.20) 0%, #A1A1A1 100%);
+background-image: linear-gradient(-206deg, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.10) 95%);
+
+
+/* background: */
+
+
+/* Rectangle 2: */
+.signin-button{
+	background: #FDB623;
+	border-radius: 8px;
+	/* Login: */
+	font-family: HelveticaNeue;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+
+
+
+/* Line: */
+opacity: 0.55;
+border: 1px solid #FFFFFF;
+/* password: */
+/* Password: */
+font-family: HelveticaNeue-Light;
+font-size: 20px;
+color: #FFFFFF;
+/* Line: */
+opacity: 0.55;
+border: 1px solid #FFFFFF;
+/* email: */
+/* Email Address: */
+font-family: HelveticaNeue-Light;
+font-size: 20px;
+color: #FFFFFF;
+
+
+/* Don’t have an accoun: */
+font-family: HelveticaNeue-Light;
+font-size: 18px;
+color: #FFFFFF;
+
+
+/* Forgot Your Password: */
+font-family: HelveticaNeue-Light;
+font-size: 15px;
+color: #FFFFFF;
+
+
+/* logo: */
+
+
+/* Happster: */
+font-family: Lobster1.4;
+font-size: 64px;
+color: #FFFFFF;

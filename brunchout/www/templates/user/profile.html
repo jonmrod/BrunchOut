@@ -1,0 +1,71 @@
+<ion-view title="{{sideMenu.firstName}} {{sideMenu.lastName}}" id="page9">        <ion-nav-buttons side="right">
+    <button ui-sref="app.sideMenu.editProfile" class="button button-icon button-clear">Edit</button>
+  </ion-nav-buttons>
+  <ion-content padding="false" class="has-header pane-gray" scroll="false">
+    <div class="item-sideNav item-borderless profile-background padding">
+      <img class="profile-avatar" src="img/AvatarProfile.png">
+      <p class="text-background">{{sideMenu.title}}</p>
+    </div>
+    <div class="row flex-center">
+      <div class="col col-50">
+        <div class="profile-card">
+          <div class="profile-icon-container profile-upvotes flex-center">
+            <i class="icon profile-icon ion-thumbsup"></i>
+          </div>  
+          <div>
+            <p class="text-center"><span class="bold">34</span> Upvotes</p>
+          </div>
+        </div>  
+      </div>
+      <div class="col col-50">
+        <div class="profile-card">
+          <div class="profile-icon-container profile-likes flex-center">
+            <i class="icon profile-icon ion-ios-heart"></i>
+          </div>  
+          <div>
+            <p class="text-center"><span class="bold">22</span> Likes</p>
+          </div>
+        </div>  
+      </div>
+    </div>
+     <div class="row flex-center">
+      <div class="col col-50">
+        <div class="profile-card">
+          <div class="profile-icon-container profile-answers flex-center">
+            <i class="icon profile-icon ion-ios-help"></i>
+          </div>  
+          <div>
+            <p class="text-center"><span class="bold">11</span> Answers</p>
+          </div>
+        </div>  
+      </div>
+      <div class="col col-50">
+        <div class="profile-card">
+          <div class="profile-icon-container profile-spotlights flex-center">
+            <i class="icon profile-icon ion-ribbon-b"></i>
+          </div>  
+          <div>
+            <p class="text-center"><span class="bold">27</span> Spotlights</p>
+          </div>
+        </div>  
+      </div>
+    </div>    
+   <!--  <div>
+      <center>
+        <h2></h2>
+        <p>{{sideMenu.teamName}}</p>          
+        <p>4 Corporate Campus Center</p>
+        <strong>New York, New York</strong> 
+      </center> 
+    </div>
+    <ion-list>
+      <ion-item class="item-icon-left">
+        <i class="icon ion-trophy"></i>12 spotlights</ion-item>
+      </ion-list>
+      <div class="button-bar">
+        <a class="button button-calm" ui-sref=".heros">Heros</a>
+        <a class="button button-calm" ui-sref=".feedback">Feedback</a>
+      </div> -->
+      <div ui-view></div>
+    </ion-content>
+  </ion-view>

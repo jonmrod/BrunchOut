@@ -1,0 +1,23 @@
+<ion-scroll ng-style="setSlideHeight()" class="feedback" direction="y" scrollbar-x="false" scrollbar-y="false">
+  <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()" spinner="spiral"></ion-refresher>
+  <div class="list" collection-repeat="item in data.team" item-width="100%" item-height="126px">
+    <div class="card">
+      <div class="item item-avatar">
+          <h1 class="card-title">{{item.fName}}</h1>
+          <div class="right">
+            <h3 class="thumbs-up right ion-arrow-up-a">{{item.votes | Pluralize: 'votes'}}</h3>
+            <p class="status-active">{{item.type}}</p>
+            <i class="icon ion-ios-star icon-status-follow" ng-show="item.isFollowing"></i>
+            <i class="icon ion-thumbsup icon-status-vote" ng-show="item.isUpvoting"></i>
+          </div>
+          <img class="item-avatar-feedback" ng-src="img/{{item.imgOfCreator}}">
+          <p class="text-gray sm-padding-top"><i class="icon-left ion-ios-person-outline fb-card-icon-padding-r"></i>{{item.createdBy}}
+          <br>
+          <i class="icon-left ion-clock fb-card-icon-padding-r"></i>{{item.createdAt | timeAgo}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div ui-view></div>
+  </div>
+</ion-scroll>

@@ -1,0 +1,23 @@
+<ion-pane class="pane-blue text-white"> 
+    <ion-nav-bar class="bar-clear">
+      <ion-nav-buttons side="right">
+        <button class="nav-button-clear" nav-direction="back" ui-sref="start"><i class="icon ion-close-round"></i></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <form ng-submit="login()">
+      <div class="list list-inset list-clear text-white top-padding"> 
+        <label class="item item-input placeholder-white">
+            <i class="icon ion-ios-email-outline placeholder-icon white"></i>
+            <input type="email" placeholder="Email" ng-model="data.email" required>
+        </label>
+        <label class="item item-input placeholder-white">
+            <i class="icon ion-ios-locked-outline placeholder-icon white"></i>
+            <input type="password" placeholder="Password" ng-model="data.password" required>
+        </label>
+        <button type="submit" class="button button-full button-yellow" ng-disabled="!data.email || !data.password">Login</button>
+         <div>
+          <p class="right text-small" nav-direction="forward" ui-sref="signup">Create an account</p>
+        </div>
+      </div>
+    </form>           
+</ion-pane>

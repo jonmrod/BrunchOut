@@ -1,0 +1,16 @@
+<ion-view class="nav-bar primary-nav">
+  
+  <ion-nav-title>
+    <span class="title">Team</span>
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+      <ion-slide>
+        <team-list></team-list>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

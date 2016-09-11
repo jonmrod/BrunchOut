@@ -1,0 +1,25 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu width="250">
+        <ion-content scroll="true" class="side-menu-left">
+            <ion-list>
+                <ion-item class="item-sideNav item-borderless side-nav-top">
+                    <div menu-close="">
+                        <p>{{sideMenu.teamName}}</p>
+                        <img ng-src="img/{{sideMenu.img}}">
+                        <h2 class="bold">{{sideMenu.firstName}} {{sideMenu.lastName}}</h2>
+                        <p>{{sideMenu.title}}</p>
+                    </div>
+                </ion-item>
+            </ion-list>
+            <ion-list class="side-nav">
+                <ion-item class="item-icon-left item-icon-right item-borderless side-nav-li" ui-sref="app.tabs.brunches" ui-sref-active="active" menu-close="">
+                    <i class="icon ion-ios-home-outline"></i>Home<i class="icon ion-ios-arrow-right arrow-right-item-icon"></i></ion-item>
+                <ion-item ng-controller="SignOutCtrl" ng-click="logout()" class="item-icon-left item-icon-right item-borderless side-nav-li" menu-close="">
+                    <i class="icon"></i>Sign Out<i class="icon ion-ios-arrow-right arrow-right-item-icon"></i></ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

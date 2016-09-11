@@ -1,0 +1,12 @@
+<ion-view title="Settings" id="page20">
+    <ion-content padding="false" class="has-header nav-bar">
+        <ion-list>
+        <ion-item class="item-divider">My Account</ion-item>
+            <ion-item class="item-icon-right" ui-sref="app.sideMenu.editProfile">Edit Profile <i class="icon ion-ios-arrow-right arrow-right-item-icon"></i></ion-item>
+        </ion-list>
+        <ion-item class="item-divider">Information &amp; Support</ion-item>
+        <ion-list>            
+            <ion-item class="text-blue" ng-controller="SignOutCtrl" ng-click="logout()">Sign Out</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
